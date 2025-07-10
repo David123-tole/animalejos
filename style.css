@@ -1,0 +1,7 @@
+body {
+    padding-right: 350px; /* espacio para el carrito */
+  }
+  #cart {
+    z-index: 1050;
+  }
+  
