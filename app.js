@@ -107,3 +107,37 @@ function agregarAlCarrito(nombre, precio) {
 
   // Mostrar carrito al cargar
   mostrarCarrito();
+
+
+ // "login"
+ const loginForm = document.getElementById("loginForm");
+if (loginForm) {
+  loginForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const usuarioInput = document.getElementById("usuario").value.trim();
+    const contrasenaInput = document.getElementById("contrasena").value.trim();
+
+    let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    const usuarioEncontrado = usuarios.find(
+      u => u.usuario === usuarioInput && u.contrasena === contrasenaInput
+    );
+
+    if (usuarioEncontrado) {
+      alert("Inicio de sesión exitoso 🐶");
+      window.location.href = "index.html"; // Redirige a la tienda
+    } else {
+      alert("Usuario o contraseña incorrectos.");
+    }
+  });
+}
+
+// Redirigir a registro
+const registroBtn = document.getElementById("registroBtn");
+if (registroBtn) {
+  registroBtn.addEventListener("click", function() {
+    window.location.href = "registro.html";
+  });
+
+}

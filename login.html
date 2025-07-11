@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Petshop 🐾</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-container">
+    <div class="image-section">
+      <img src="imagenes/perrito_login.jpg" alt="Perrito tierno">
+    </div>
+    <div class="form-section">
+      <h2>Bienvenido a Animalejos 🐶</h2>
+      <form id="loginForm">
+        <input type="text" id="usuario" placeholder="Usuario" required />
+        <input type="password" id="contrasena" placeholder="Contraseña" required />
+        
+        <!-- Botón para iniciar sesión -->
+        <button type="submit">Iniciar Sesión</button>
+
+        <!-- Botón para ir a registro -->
+        <button type="button" id="registroBtn" class="registro">Registrarse</button>
+      </form>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
